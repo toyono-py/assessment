@@ -20,7 +20,7 @@
         // 診断結果表示エリアのクリア
         removeAllChildren(resultDivided);
         if (userName.length === 0) { // 名前が空の時は処理を終了する
-            tweetDivided.display = 'none';
+            tweetDivided.style.display = 'none';
             return;
         }
 

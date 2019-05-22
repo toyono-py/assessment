@@ -19,8 +19,8 @@
         const userName = userNameInput.value;
         // 診断結果表示エリアのクリア
         removeAllChildren(resultDivided);
+        removeAllChildren(tweetDivided);
         if (userName.length === 0) { // 名前が空の時は処理を終了する
-            tweetDivided.style.display = 'none';
             return;
         }
 
@@ -35,7 +35,6 @@
         resultDivided.appendChild(paragraph);
 
         // ツイートエリアの作成
-        removeAllChildren(tweetDivided);
         const anchor = document.createElement('a');
         const hrefValue = 'https://twitter.com/intent/tweet?button_hashtag=%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E3%81%84%E3%81%84%E3%81%A8%E3%81%93%E3%82%8D&text='
         + encodeURIComponent(result);
